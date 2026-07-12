@@ -772,7 +772,7 @@ export function Portfolio() {
             <div className="grid gap-8 md:grid-cols-5">
               <div className="reveal card-surface flex flex-col justify-between gap-6 p-8 md:col-span-2">
                 <div className="space-y-5">
-                  <a href="mailto:sara.hassib@example.com" className="flex items-start gap-4 group">
+                  <a href="mailto:sarahassib687@gmail.com" className="flex items-start gap-4 group">
                     <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-secondary text-[var(--color-primary)] transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                       <Mail className="h-4 w-4" />
                     </div>
@@ -780,7 +780,7 @@ export function Portfolio() {
                       <div className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                         Email
                       </div>
-                      <div className="truncate font-semibold">sara.hassib@example.com</div>
+                      <div className="truncate font-semibold">sarahassib687@gmail.com</div>
                     </div>
                   </a>
                   <a href="#" className="flex items-start gap-4 group">
@@ -802,7 +802,7 @@ export function Portfolio() {
                       <div className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                         Phone
                       </div>
-                      <div className="font-semibold">+00 000 000 000</div>
+                      <div className="font-semibold">+216 61 962 9538</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
