@@ -5,8 +5,8 @@ import { dict, type Lang } from "@/lib/i18n";
 import { supabase } from "@/lib/supabase";
 import heroImg from "@/assets/hero-illustration.png";
 import certImg from "@/assets/cert-placeholder.jpg";
-import proj1 from "@/assets/project-1.jpg";
-import proj2 from "@/assets/project-2.jpg";
+import proj1 from "@/assets/amm-dashboard.svg";
+import proj2 from "@/assets/amm-landing.svg";
 import proj3 from "@/assets/project-3.jpg";
 import {
   Download,
