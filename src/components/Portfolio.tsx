@@ -179,10 +179,39 @@ const defaultEducation = [
 const defaultProjects = [
   {
     img: proj1,
+    title: "AMM Dashboard",
+    category: "Web App",
+    tech: ["React", "TypeScript", "Tailwind"],
+    desc: "Real-time concrete batching plant monitoring dashboard with live data visualization.",
+    liveUrl: "https://amm-dashboard.vercel.app/dashboard",
+    githubUrl: "https://github.com/sarahassib/amm-dashboard",
+  },
+  {
+    img: proj2,
+    title: "AMM Landing Page",
+    category: "Web & Conversion",
+    tech: ["React", "Tailwind", "Vercel"],
+    desc: "High-converting landing page for AMM concrete batching solutions.",
+    liveUrl: "https://amm-concrete-batching-landing.vercel.app/",
+    githubUrl: "https://github.com/sarahassib/amm-concrete-batching-landing",
+  },
+  {
+    img: proj3,
+    title: "Portfolio Website",
+    category: "Personal Brand",
+    tech: ["React", "Tailwind", "Lovable"],
+    desc: "This portfolio — a dark, premium take on the modern personal site.",
+    liveUrl: "",
+    githubUrl: "",
+  },
+  {
+    img: proj1,
     title: "Meta Ads Campaign",
     category: "Paid Social",
     tech: ["Meta Ads Manager", "Canva", "GA4"],
     desc: "End-to-end paid social campaign — creative, targeting and reporting.",
+    liveUrl: "",
+    githubUrl: "",
   },
   {
     img: proj2,
@@ -190,27 +219,8 @@ const defaultProjects = [
     category: "Web & Conversion",
     tech: ["HTML", "CSS", "WordPress"],
     desc: "High-converting landing page designed and shipped for a personal launch.",
-  },
-  {
-    img: proj3,
-    title: "Social Media Project",
-    category: "Content & Community",
-    tech: ["CapCut", "Canva", "Notion AI"],
-    desc: "Content calendar, short-form video and community rituals for organic growth.",
-  },
-  {
-    img: proj1,
-    title: "Google Ads Campaign",
-    category: "Search & Performance",
-    tech: ["Google Ads", "GA4", "Looker Studio"],
-    desc: "Search strategy with keyword clustering and Looker Studio reporting.",
-  },
-  {
-    img: proj2,
-    title: "Portfolio Website",
-    category: "Personal Brand",
-    tech: ["React", "Tailwind", "Lovable"],
-    desc: "This portfolio — a dark, premium take on the modern personal site.",
+    liveUrl: "",
+    githubUrl: "",
   },
   {
     img: proj3,
@@ -218,6 +228,8 @@ const defaultProjects = [
     category: "Positioning",
     tech: ["Figma", "Notion", "ChatGPT"],
     desc: "Brand pillars, tone of voice and visual identity for a personal project.",
+    liveUrl: "",
+    githubUrl: "",
   },
 ];
 
@@ -401,6 +413,8 @@ export function Portfolio() {
           category: p.category as string,
           tech: (p.tech as string[]) ?? [],
           desc: (p.description as string) ?? "",
+          liveUrl: (p.live_url as string) ?? "",
+          githubUrl: (p.github_url as string) ?? "",
         }))
       : defaultProjects;
 
@@ -719,12 +733,16 @@ export function Portfolio() {
                       ))}
                     </div>
                     <div className="mt-5 flex items-center gap-4 text-sm">
-                      <button className="inline-flex items-center gap-1.5 font-semibold text-[var(--color-primary)] hover:gap-2 transition-all">
-                        {t.projects.view} <ArrowUpRight className="h-4 w-4" />
-                      </button>
-                      <button className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors">
-                        <Github className="h-4 w-4" /> {t.projects.github}
-                      </button>
+                      {p.liveUrl && (
+                        <a href={p.liveUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold text-[var(--color-primary)] hover:gap-2 transition-all">
+                          {t.projects.view} <ArrowUpRight className="h-4 w-4" />
+                        </a>
+                      )}
+                      {p.githubUrl && (
+                        <a href={p.githubUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors">
+                          <Github className="h-4 w-4" /> {t.projects.github}
+                        </a>
+                      )}
                     </div>
                   </div>
                 </article>
