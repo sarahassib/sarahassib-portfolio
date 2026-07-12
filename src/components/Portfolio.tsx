@@ -235,16 +235,22 @@ const defaultProjects = [
 
 const defaultExperience = [
   {
-    company: "Freelance",
-    position: "Digital Marketing Specialist",
-    duration: "2024 — Present",
-    desc: "Paid media, analytics setup and content strategy for small businesses and personal brands.",
+    company: "Atlantic Machinery Manufacturing",
+    position: "Digital Marketing & Business Development Officer",
+    duration: "2025 — Present",
+    desc: "Gestion des pages Facebook, Instagram et LinkedIn; création et pilotage du calendrier éditorial. Conception de contenus marketing et visuels publicitaires assistée par IA. Création, lancement et optimisation de campagnes Meta Ads – 8 à 10 campagnes actives par semaine. Génération de 250 à 300 leads qualifiés par mois via les stratégies d'acquisition ciblées. Community management, prospection commerciale B2B et constitution de bases de données clients. Lead nurturing via WhatsApp et campagnes d'Email Marketing. Suivi des performances et optimisation continue des campagnes.",
   },
   {
-    company: "Agency Internship",
-    position: "Junior Marketing Associate",
-    duration: "2023 — 2024",
-    desc: "Supported paid campaigns, community management and reporting across multiple client accounts.",
+    company: "Les Laboratoires Sembaco",
+    position: "Graphic Designer",
+    duration: "2024 — 2025",
+    desc: "Création de packagings (compléments alimentaires, cosmétiques) et de catalogues produits/commerciaux.",
+  },
+  {
+    company: "Ard El Khaleej",
+    position: "Graphic Designer",
+    duration: "2024 — 2025",
+    desc: "Création de posts publicitaires et de catalogues produits.",
   },
 ];
 
