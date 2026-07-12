@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Geist:wght@100..900&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Hallmark · genre: editorial · macrostructure: Portfolio Grid · theme: custom (vibe: "plum purple premium, #D7D2CB greige accents") · enrichment: none (typography only) · nav: N5 · footer: Ft5 */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-coral: var(--coral);
+  --color-coral-foreground: var(--coral-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --shadow-card: 0 2px 8px -2px oklch(0% 0 0 / 0.3);
+  --shadow-elevated: 0 12px 40px -8px oklch(0% 0 0 / 0.5);
+}
+
+:root {
+  --radius: 1rem;
+
+  /* Deep plum purple base */
+  --background: oklch(0.18 0.04 300);
+  --foreground: oklch(0.95 0.008 80);
+
+  /* #D7D2CB warm greige for surfaces */
+  --card: oklch(0.86 0.012 80);
+  --card-foreground: oklch(0.18 0.04 300);
+  --popover: oklch(0.86 0.012 80);
+  --popover-foreground: oklch(0.18 0.04 300);
+
+  /* Plum purple — primary accent */
+  --primary: oklch(0.58 0.17 300);
+  --primary-foreground: oklch(0.98 0.005 300);
+
+  --secondary: oklch(0.25 0.04 300);
+  --secondary-foreground: oklch(0.92 0.01 80);
+
+  --muted: oklch(0.25 0.035 300);
+  --muted-foreground: oklch(0.78 0.015 80);
+
+  --accent: oklch(0.25 0.045 300);
+  --accent-foreground: oklch(0.95 0.008 80);
+
+  /* Warm gold — secondary accent */
+  --gold: oklch(0.78 0.1 75);
+  --gold-foreground: oklch(0.18 0.04 300);
+
+  /* Dusty rose — tertiary accent */
+  --coral: oklch(0.62 0.13 340);
+  --coral-foreground: oklch(0.98 0.005 340);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0.005 82);
+
+  --border: oklch(0.42 0.03 300);
+  --input: oklch(0.38 0.03 300);
+  --ring: oklch(0.58 0.17 300);
+}
+
+/* Dark is now the default — no .dark override needed */
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+  }
+  body {
+    overflow-x: clip;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-weight: 350;
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    font-style: normal;
+  }
+}
+
+@utility glass-chip {
+  background: color-mix(in oklab, var(--color-card) 70%, transparent);
+  color: var(--color-card-foreground);
+  backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid color-mix(in oklab, var(--color-foreground) 8%, transparent);
+}
+
+@utility card-surface {
+  background: var(--color-card);
+  color: var(--color-card-foreground);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  border: 1px solid color-mix(in oklab, var(--color-foreground) 6%, transparent);
+}
+
+@utility glass-nav {
+  background: color-mix(in oklab, var(--color-background) 80%, transparent);
+  backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid color-mix(in oklab, var(--color-foreground) 6%, transparent);
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes reveal-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
