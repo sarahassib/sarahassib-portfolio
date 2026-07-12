@@ -163,16 +163,22 @@ const defaultCertifications = [
 
 const defaultEducation = [
   {
-    degree: "Bachelor in Marketing & Communication",
-    school: "University Program",
-    year: "2021 — 2024",
-    desc: "Focus on brand strategy, consumer behaviour and digital communication.",
+    degree: "Licence Pro. — Ingénierie Sécurité et Administration des Réseaux et Systèmes",
+    school: "ENSA",
+    year: "2025 — Present",
+    desc: "Formation en cours portant sur la sécurité informatique, l'administration des réseaux et des systèmes.",
   },
   {
-    degree: "Digital Marketing Specialisation",
-    school: "Online Bootcamp",
-    year: "2024",
-    desc: "Intensive training on paid media, analytics, funnels and AI-powered marketing.",
+    degree: "Technicien Spécialisé en Développement Digital",
+    school: "OFPPT",
+    year: "2022 — 2024",
+    desc: "Formation spécialisée en développement web, mobile et design digital.",
+  },
+  {
+    degree: "Baccalauréat Sciences Physiques",
+    school: "Lycée Al Arsaal",
+    year: "2022",
+    desc: "Baccalauréat avec spécialité sciences physiques.",
   },
 ];
 
