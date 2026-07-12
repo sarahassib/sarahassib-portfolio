@@ -802,7 +802,7 @@ export function Portfolio() {
                       <div className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                         Phone
                       </div>
-                      <div className="font-semibold">+216 61 962 9538</div>
+                      <div className="font-semibold">+212 61 962 9538</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
