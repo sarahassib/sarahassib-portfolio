@@ -463,8 +463,8 @@ export function Portfolio() {
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a
-                  href="#"
-                  onClick={(e) => e.preventDefault()}
+                  href="/CV_Sara_Hassib.pdf"
+                  download
                   className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-elevated)] transition-all hover:-translate-y-0.5 hover:shadow-[0_16px_48px_-8px_oklch(0.55_0.16_300_/_0.35)]"
                 >
                   <Download className="h-4 w-4" /> {t.hero.cv}
