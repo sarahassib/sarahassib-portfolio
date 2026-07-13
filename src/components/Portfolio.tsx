@@ -5,6 +5,7 @@ import { dict, type Lang } from "@/lib/i18n";
 import { supabase } from "@/lib/supabase";
 import heroImg from "@/assets/hero-illustration.png";
 import certImg from "@/assets/cert-placeholder.jpg";
+import diplomeImg from "@/assets/diplome.png";
 import proj1 from "@/assets/amm-dashboard.svg";
 import proj2 from "@/assets/amm-landing.svg";
 import proj3 from "@/assets/project-3.jpg";
@@ -83,6 +84,13 @@ const defaultTools = [
 ];
 
 const defaultCertifications = [
+  {
+    title: "Technicien Spécialisé en Développement Digital",
+    org: "OFPPT",
+    date: "2024",
+    desc: "Formation spécialisée en développement web, mobile et design digital.",
+    img: diplomeImg,
+  },
   {
     title: "Meta Certified Digital Marketing Associate",
     org: "Meta",
