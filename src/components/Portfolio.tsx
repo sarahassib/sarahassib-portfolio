@@ -530,7 +530,7 @@ export function Portfolio() {
               </div>
             </div>
             <div className="reveal relative">
-              <div className="card-surface overflow-hidden rounded-3xl">
+              <div className="card-surface overflow-hidden rounded-3xl border-0">
                 <img
                   src={heroImg}
                   alt="Sara Hassib — Digital Marketing Specialist"
